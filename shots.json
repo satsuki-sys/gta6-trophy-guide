@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+{"shots":[{"file":"1-checklist.jpg","shows":"The checklist (the cover): the progress ring at 5 of 55 earned, kind filter chips, grade and sort controls, the first trophy cards in roadmap order with earned ticks, and a guide already open in the detail pane — The Goodtime State, with its sources listed."},{"file":"2-guide.jpg","shows":"An open trophy guide: Positive Mental Attitude, the list's one reported possible missable — its full guide in our own words, the possible-missable warning box, the count-progress editor (0 of 18 meditation spots) and the Sources list with links (Exophase, PSNProfiles, KeenGamer, Mobalytics)."},{"file":"3-roadmap.jpg","shows":"The platinum roadmap's Missables & watch-outs section — the possible missable plus the two cautioned trophies (Maximum Withdrawal, Actions Speak Louder) — above Stage 1 'Opening waters' and Stage 2, with earned ticks carried over from the checklist."}]}

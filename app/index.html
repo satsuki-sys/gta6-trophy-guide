@@ -3,23 +3,102 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide &amp; tracker</p>
+    <h1>Leonida Legend</h1>
+    <p class="tagline">All 55 trophies with a cited guide for each, a platinum roadmap, missable watch-outs — and a checklist that remembers.</p>
+  </div>
+  <div class="masthead-progress">
+    <div class="ring-wrap">
+      <svg class="ring" viewBox="0 0 84 84" aria-hidden="true">
+        <circle class="ring-track" cx="42" cy="42" r="36"></circle>
+        <circle class="ring-fill" id="ring-fill" cx="42" cy="42" r="36"></circle>
+      </svg>
+      <div class="ring-label"><span id="progress-count">0</span><small>of 55</small></div>
+    </div>
+    <p id="progress-line">0 of 55 earned</p>
+    <p id="grade-line" class="grade-line"></p>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
-<script type="module" src="app.js"></script>
+
+<nav class="toolbar" aria-label="Views and filters">
+  <div class="view-tabs" role="tablist">
+    <button id="tab-checklist" class="tab active" type="button">Checklist</button>
+    <button id="tab-roadmap" class="tab" type="button">Platinum roadmap</button>
+  </div>
+  <div class="filters" id="filters">
+    <input id="search" type="search" placeholder="Search trophies…" aria-label="Search trophies">
+    <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind">
+      <button type="button" class="chip active" data-kind="all">All</button>
+      <button type="button" class="chip" data-kind="story">Story</button>
+      <button type="button" class="chip" data-kind="missable">Missable &amp; watch-outs</button>
+      <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+      <button type="button" class="chip" data-kind="activities">Activities</button>
+      <button type="button" class="chip" data-kind="online">Online</button>
+    </div>
+    <label class="select-label">Grade
+      <select id="grade-filter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="select-label">Sort
+      <select id="sort-order">
+        <option value="roadmap">Roadmap order</option>
+        <option value="grade">Grade</option>
+        <option value="name">Name</option>
+        <option value="remaining">Still to earn first</option>
+      </select>
+    </label>
+    <label class="switch">
+      <input id="spoiler-toggle" type="checkbox">
+      <span>Hide story spoilers</span>
+    </label>
+  </div>
+  <div class="data-actions">
+    <button id="export-btn" type="button">Export progress</button>
+    <label class="import-btn">Import progress <input id="import-file" type="file" accept="application/json"></label>
+    <button id="reset-btn" type="button" class="quiet">Reset</button>
+  </div>
+</nav>
+
+<p class="online-note" id="online-note" hidden>The official list has no online trophies: all 55 are single-player (SixShore's trophy list; KeenGamer's roadmap). “Partner” in a description means the other protagonist, not a second player.</p>
+
+<main id="checklist-view" class="layout">
+  <section class="list-pane" aria-label="Trophy checklist">
+    <p id="result-line" class="result-line"></p>
+    <div id="trophy-list" class="trophy-list"></div>
+  </section>
+  <aside class="detail-pane" aria-label="Trophy guide">
+    <div id="detail" class="detail"></div>
+  </aside>
+</main>
+
+<main id="roadmap-view" class="roadmap" hidden>
+  <section class="roadmap-intro">
+    <h2>The road to Vice Got a Price!</h2>
+    <p>Eight stages, in the order a first run meets them. Story first, because the game has no mission replay; collections and feats fill the travelling between missions; money and property next; then the 100% checklist and the platinum. Guides put the full run at roughly 200–250 hours (SixShore's roadmap), so the stages are a season, not a weekend. Two standing warnings: keep cheats off — they disable trophies (Mobalytics) — and keep a rolling manual save, because the game offers 15 manual slots and no replays (Games.gg).</p>
+  </section>
+  <section class="watchouts">
+    <h2>Missables &amp; watch-outs</h2>
+    <p class="watchouts-lede">One trophy is reported as a possible missable, and two more carry conditions a careless run can walk past. Each flag below is built from the trophy's official description and the cited guide — nothing is flagged on a hunch.</p>
+    <div id="watchout-list"></div>
+  </section>
+  <div id="stage-list"></div>
+</main>
+
+<footer class="colophon">
+  <p>Trophy names, descriptions and grades are the official PlayStation list, as mirrored by Exophase and PSNProfiles. Every guide here is written for this tracker and names its sources; a fact with no source earns no place in a guide. This app works fully offline and saves progress only in your browser.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

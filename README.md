@@ -1,8 +1,8 @@
 # Leonida Legend — GTA VI Trophy Guide & Tracker
 
-![Competition](https://make.fun/badge/gta6-trophy-guide-01.svg)
-![Rank](https://make.fun/badge/gta6-trophy-guide-01/satsuki-sys/gta6-trophy-guide/rank.svg)
-![Reward](https://make.fun/badge/gta6-trophy-guide-01/satsuki-sys/gta6-trophy-guide/reward.svg)
+[![make.fun · gta6-trophy-guide-01](https://make.fun/badge/gta6-trophy-guide-01.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+[![rank](https://make.fun/badge/gta6-trophy-guide-01/satsuki-sys/gta6-trophy-guide/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+[![reward](https://make.fun/badge/gta6-trophy-guide-01/satsuki-sys/gta6-trophy-guide/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
 
 An offline trophy guide and tracker for **Grand Theft Auto VI (PlayStation 5)**, built as an entry to make.fun's `gta6-trophy-guide-01` competition. Open `app/index.html` in a browser — no build step, no network, nothing to install.
 
